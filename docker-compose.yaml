@@ -1,8 +1,8 @@
 version: "3.8"
 services:
-  blowfish-apache:
-    image: loveless2u/phpcrypfish:latest
-    container_name: blowfish-apache
+  docker-apache:
+    image: my-php-site:latest
+    container_name: docker-apache
     ports:
       - "80:80"
     depends_on:
@@ -10,7 +10,7 @@ services:
 
   mysql-db:
     image: mysql:5.6
-    container_name: blowfish-mysql
+    container_name: mysql-container
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: inventory
